@@ -11,11 +11,16 @@ import (
 func main() {
 
 	cfg := config.Load()
-	c := cache.NewMemory()
+
+	if cfg.Origin == "" {
+		log.Fatal("missing required flag: --origin")
+	}
+
+	cache := cache.NewMemory()
 
 	proxy := proxy.New(
 		cfg.Origin,
-		c,
+		cache,
 	)
 
 	er := server.Start(cfg.Port, proxy)

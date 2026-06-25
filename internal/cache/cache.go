@@ -9,7 +9,7 @@ type Item struct {
 }
 
 type Cache interface {
-	Get(key string) ([]byte, bool)
-	Set(key string, value []byte)
+	Get(key string) (Item, bool)
+	Set(key string, value Item)
 	Clear()
 }
