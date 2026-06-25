@@ -1,6 +1,8 @@
 
 Go answer for https://roadmap.sh/projects/caching-server
 
+https://roadmap.sh/projects/caching-server/solutions?u=64cc46bc0d755ccbebd7cb30
+
 # Caching Proxy
 Build a caching server that caches responses from other servers.
 
